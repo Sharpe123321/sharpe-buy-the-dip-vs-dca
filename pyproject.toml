@@ -1,8 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "dipdca"
 version = "1.0.0"
 description = "Sharpe newsletter, study 1: does buying the dip beat dollar-cost averaging in Canada?"
+readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "requests>=2.31",
+    "yfinance>=0.2.40",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

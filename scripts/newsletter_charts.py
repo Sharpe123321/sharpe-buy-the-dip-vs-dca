@@ -5,7 +5,7 @@ The day-by-day CSVs behind chart 1 are written to local_only/ (git-ignored), NOT
 daily value determines the underlying price series (SPY's daily returns can be rebuilt from it), so publishing
 them would amount to publishing Yahoo's data.
 
-  chart_growth_spy.png       SPY, Nov 2001 - Oct 2026: monthly investor vs 20% dip-buyer vs cash put in
+  chart_growth_spy.png       SPY, last 25 years: monthly investor vs 20% dip-buyer vs cash put in
   chart_why_canada.png       SPY vs XIU: time below the high, number of 10%+ drawdowns, months to recover
   chart_fragility_xiu.png    XIU, 20-year windows: dip-buyer win rate with T-bill cash vs 0% cash
 
@@ -30,7 +30,7 @@ from matplotlib.ticker import FuncFormatter  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
-from dipdca.engine import Prepared, Strategy  # noqa: E402
+from dipdca.engine import Prepared, Strategy, value_window  # noqa: E402
 from dipdca.reference import simulate  # noqa: E402
 import spy_25y  # noqa: E402
 
@@ -74,7 +74,10 @@ def chart_growth_spy() -> dict:
     a, b = int(prep.first[s]), int(prep.last[s + N - 1])
     dca = simulate(m, Strategy("dca"), a, b, cash="tbill", cost=spy_25y.COST)
     dip = simulate(m, Strategy("dip", 0.20, "threshold"), a, b, cash="tbill", cost=spy_25y.COST)
-    assert round(dca.final_value) == 870524 and round(dip.final_value) == 824830, (dca.final_value, dip.final_value)
+    # self-check that holds for any data: the fast engine must agree with the day-by-day simulator that draws the chart
+    for strat, ref in ((Strategy("dca"), dca), (Strategy("dip", 0.20, "threshold"), dip)):
+        fast = value_window(prep, strat, s, N, cash="tbill", cost=spy_25y.COST, amount=spy_25y.AMOUNT).final_value
+        assert abs(fast / ref.final_value - 1) < 1e-9, (strat, fast, ref.final_value)
     dates = pd.DatetimeIndex(m.dates[a:b + 1])
 
     # ---- exports: local only, never committed (see the module docstring)
@@ -94,7 +97,7 @@ def chart_growth_spy() -> dict:
     h = 5.7
     gap = dca.final_value - dip.final_value
     fig = frame(h, f"Waiting for a 20% dip cost an SPY investor ${gap:,.0f} over 25 years",
-                "$500 a month into SPY, Nov 2001 to Oct 2026; money not yet invested earns the US 3-month T-bill rate",
+                f"$500 a month into SPY, {dates[0]:%b %Y} to {dates[-1]:%b %Y}; money not yet invested earns the US 3-month T-bill rate",
                 ["Source: Yahoo Finance (SPY, dividend-adjusted), FRED (3-month Treasury yield), Sharpe analysis. 0.05% spread on every purchase.",
                  "The dip-buyer saves each $500 and invests all cash the day after SPY closes 20% or more below its all-time high."])
     ax = axes(fig, h, right=0.80, bottom_in=0.85)
@@ -185,7 +188,7 @@ def chart_fragility_xiu() -> pd.DataFrame:
     fig = frame(h, "Without cash interest, Canada's 20% and 30% dip edge fades",
                 f"XIU: share of 20-year windows ({n}) in which buying the dip beat investing every month, by dip size",
                 ["Source: Yahoo Finance (XIU.TO), Bank of Canada (T-bill yield), Sharpe analysis (results/summary_xiu_cad.csv). 0.05% spread on every purchase.",
-                 f"The {n} windows overlap and hold only about 1.4 independent 20-year periods."])
+                 f"The {n} windows overlap and hold only about {float(s.approx_independent_windows.iloc[0]):.1f} independent 20-year periods."])
     ax = axes(fig, h, right=0.80, bottom_in=0.80)
     x = np.arange(4)
     wbar = 0.34

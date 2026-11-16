@@ -43,11 +43,22 @@ plt.rcParams.update({
     "axes.grid": True, "axes.axisbelow": True, "grid.color": GRID, "grid.linewidth": 0.8, "hatch.linewidth": 1.4,
 })
 THR = [("dip_5pct", "5%"), ("dip_10pct", "10%"), ("dip_20pct", "20%"), ("dip_30pct", "30%"), ("perfect_timing", "Perfect\ntiming*")]
-PANELS = [("XIU (TSX 60 ETF), CAD", "XIU (TSX 60 ETF)  ·  Oct 1999 – 2026"),
-          ("S&P 500, CAD", "S&P 500 converted to CAD  ·  1988 – 2026")]
+PANELS = [("XIU (TSX 60 ETF), CAD", "XIU (TSX 60 ETF)  ·  Oct 1999 – {end}"),
+          ("S&P 500, CAD", "S&P 500 converted to CAD  ·  1988 – {end}")]
 FOOT = ("Cash earns the Canadian 3-month T-bill rate; 0.05% spread per purchase; dividends reinvested; fills at the next trading day's close.\n"
         "*Perfect timing buys at the exact bottom between all-time highs. It needs hindsight - a hypothetical, not a strategy.\n"
         "Sources: Yahoo Finance (XIU.TO, ^SP500TR), Bank of Canada (T-bill yield), FRED (CAD per USD). Code and method: METHODOLOGY.md")
+
+
+def _end_year(d: pd.DataFrame) -> int:
+    """Calendar year in which the data ends: the latest window start plus its length."""
+    return int(max(int(str(r.last_start)[:4]) + int(r.horizon_years) for r in d.itertuples()))
+
+
+def _cash_note(head: pd.DataFrame) -> str:
+    v = float(head[head.asset.str.startswith("XIU") & (head.horizon_years == 10) & (head.strategy == "dip_30pct")]["avg_months_in_cash"].iloc[0])
+    return (f"A 10-year window is 120 months, so {v:.0f} on XIU's 30% bar (10 years) means cash was on hand about "
+            f"{v / 12:.0f} months in 10.")
 
 
 def _grouped(ax, df, value, horizons, fmt, ylim, ref=None):
@@ -108,7 +119,7 @@ def chart1(head: pd.DataFrame) -> Path:
     for ax, (name, ttl) in zip(axes, PANELS):
         d = head[head.asset == name]
         _grouped(ax, d, "pct_beats_monthly", sorted(d.horizon_years.unique()), lambda v: f"{v:.0f}%", 108, ref=50)
-        ax.set_title(ttl, loc="left", fontsize=11.5, color=INK, pad=10, fontweight="semibold")
+        ax.set_title(ttl.format(end=_end_year(d)), loc="left", fontsize=11.5, color=INK, pad=10, fontweight="semibold")
         ax.set_yticks([0, 25, 50, 75, 100])
         ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
         ax.set_xlabel("Buy when the index is this far below its all-time high", fontsize=10, labelpad=8)
@@ -129,14 +140,14 @@ def chart3(head: pd.DataFrame) -> Path:
     for ax, (name, ttl) in zip(axes, PANELS):
         d = head[head.asset == name]
         _grouped(ax, d, "avg_months_in_cash", sorted(d.horizon_years.unique()), lambda v: f"{v:.0f}", 305)
-        ax.set_title(ttl, loc="left", fontsize=11.5, color=INK, pad=10, fontweight="semibold")
+        ax.set_title(ttl.format(end=_end_year(d)), loc="left", fontsize=11.5, color=INK, pad=10, fontweight="semibold")
         ax.set_yticks([0, 60, 120, 180, 240, 300])
         ax.set_xlabel("Buy when the index is this far below its all-time high", fontsize=10, labelpad=8)
     axes[0].set_ylabel("Average months holding any uninvested cash", fontsize=10)
     _header(fig, "How long the dip-buyer sits in cash waiting",
             "Average number of months, per window, in which some cash was not yet invested (monthly DCA: always 0)")
     _legend(fig, None, win_months=True)
-    fig.text(0.045, 0.012, FOOT + "\nA 10-year window is 120 months, so 109 on the 10-year bar means cash was on hand about 9 months in 10.",
+    fig.text(0.045, 0.012, FOOT + "\n" + _cash_note(head),
              fontsize=8.1, color=MUTED, va="bottom", linespacing=1.45)
     p = OUT / "3_months_in_cash.png"
     fig.savefig(p, dpi=160)

@@ -351,7 +351,8 @@ markets over overlapping eras are simply two draws.
 ### 10.3 The newsletter charts (`scripts/newsletter_charts.py`)
 
 Three charts, 1800 px wide, built from the saved results and the cached data without rerunning the main study. US
-colour `#1f4e79`, Canada colour `#c8102e`. The script asserts that chart 1's ending values are $870,524 and $824,830.
+colour `#1f4e79`, Canada colour `#c8102e`. The script asserts that the fast engine and the day-by-day simulator that draws chart 1 agree on both ending
+values (the published run ends at $870,524 and $824,830).
 
 - `charts/chart_growth_spy.png`: the 25-year SPY path of section 10.1 at the 20% dip size, drawn from the day-by-day
   reference simulator. The script also writes the day-by-day series behind it (daily and

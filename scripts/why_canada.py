@@ -7,7 +7,8 @@ existing engine; the main study is NOT rerun.
     results/why_canada_windows.csv      per 10-year window: share of days 10%+ below the high vs the 10% dip-buyer's result
 
 Definitions (all on dividend-adjusted closes, so total return, each market in its own currency):
-  * shared period      1999-10-04 (XIU's first day) to 2026-10-30 (last complete month).
+  * shared period      1999-10-04 (XIU's first day) to the last trading day on or before AS_OF (2026-10-31, the
+                       cut-off of the published results, so the last day used is 2026-10-30).
   * all-time high      running maximum from the start of the shared period, for both markets.
   * % of months        month-end closes that are >= 10% (or 20%) below the all-time high.
   * drawdown           the stretch between one strictly-new all-time high and the next.  It counts as a "10% drawdown"
@@ -32,13 +33,14 @@ import spy_25y  # noqa: E402
 
 RES = ROOT / "results"
 DAYS_PER_MONTH = 30.4375
+AS_OF = "2026-10-31"        # data cut-off of the published results; edit it to roll the comparison forward
 
 
 def shared_series() -> dict[str, pd.Series]:
     xiu = data.load_yahoo("XIU.TO")["adj_close"]
     spy = data.load_yahoo("SPY")["adj_close"]
     start = max(xiu.index.min(), spy.index.min())
-    end = min(xiu[xiu.index <= "2026-10-31"].index.max(), spy[spy.index <= "2026-10-31"].index.max())
+    end = min(xiu[xiu.index <= AS_OF].index.max(), spy[spy.index <= AS_OF].index.max())
     return {"SPY (US)": spy.loc[start:end], "XIU (Canada)": xiu.loc[start:end]}
 
 

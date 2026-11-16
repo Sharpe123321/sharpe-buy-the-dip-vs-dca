@@ -4,7 +4,7 @@ Quick SPY-only study (simplified rerun).
   * Asset: SPY from Yahoo Finance, dividend-adjusted close = total return, USD.  Nothing else is traded.
   * Period: the last 25 years = 300 monthly deposits of $500, first deposit on the first trading day of
     Nov 2001, last on the first trading day of Oct 2026 (Nov 2026 is a partial month), valued at the last
-    trading day of Oct 2026.
+    trading day of Oct 2026 (the published run).  The window rolls forward with the data you download.
   * Idle cash earns the US 3-month Treasury bill (FRED DGS3MO, constant-maturity yield, daily): simple actual/365
     interest, using the rate published on or before the previous close.
   * Strategies: monthly DCA, and buy-the-dip at 5 / 10 / 15 / 20% below SPY's all-time high (the high is measured

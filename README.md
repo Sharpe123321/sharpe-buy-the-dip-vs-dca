@@ -6,6 +6,8 @@ traces to a CSV in [`results/`](results/).
 
 > Educational research, not investment advice. Past results do not predict the future.
 
+[![tests](https://github.com/Sharpe123321/sharpe-buy-the-dip-vs-dca/actions/workflows/tests.yml/badge.svg)](https://github.com/Sharpe123321/sharpe-buy-the-dip-vs-dca/actions/workflows/tests.yml)
+
 **Jump to:** [The question](#the-question) ·
 [The short answer](#the-short-answer) ·
 [The six charts](#the-six-charts) ·
@@ -14,6 +16,8 @@ traces to a CSV in [`results/`](results/).
 [Sanity check vs Maggiulli](#sanity-check-against-maggiulli-not-reproduced) ·
 [Reproduce it](#reproduce-it) ·
 [Repository map](#repository-map) ·
+[Building on this](#building-on-this) ·
+[Troubleshooting](#troubleshooting) ·
 [How we know the code is right](#how-we-know-the-code-is-right) ·
 [Data and licensing](#data-and-licensing) ·
 [Limitations](#limitations)
@@ -287,7 +291,8 @@ python run_all.py                  # data audit -> tests -> sanity check -> stud
 ```
 
 The run stops at the first failure, so no number is produced from a failed audit or a failing test. The test suite
-alone takes about two minutes.
+alone takes about two minutes. If you want to import the code from your own scripts, install it instead with
+`pip install -e ".[test]"` (see [Building on this](#building-on-this)).
 
 To rerun only parts:
 
@@ -302,15 +307,31 @@ python scripts/check_no_raw_data.py  # confirms no provider data is in the repo 
 
 `python run_all.py --refresh` deletes the cache and re-downloads every input.
 
-**Tested from a fresh clone.** On 2026-11-15 a clean clone, a new virtual environment (Python 3.10, with the library
-versions pip resolves from `requirements.txt`) and a full `python run_all.py` passed all 59 tests and finished in about
-three minutes. It reproduced every win rate and median in `headline_table.csv` to within 0.05 percentage points, and
-the SPY dollar values to the cent.
+**What has been tested.** On 2026-11-15, from a fresh clone on Windows 11:
 
-**Your numbers may still differ slightly from the published ones.** A later run includes newer prices, Yahoo can
-revise its dividend-adjusted history, and the Kenneth French library has since added two months, which moves the
-Maggiulli sanity-check win rates by up to 0.16 percentage points without changing its conclusion.
-`requirements-lock.txt` pins the library versions used for the published results.
+| Python | pandas / numpy | What ran | Result |
+|---|---|---|---|
+| 3.10 | 2.3.3 / 2.2.6 (the versions in `requirements-lock.txt`) | full `python run_all.py`, twice | all 59 tests and every step passed, about 3 minutes |
+| 3.13 | 3.1.1 / 2.5.5 (the newest pip resolves today) | full `python run_all.py` | all 59 tests and every step passed, under 4 minutes |
+| 3.11 and 3.14 | 3.1.1 / 2.4.6 and 2.5.5 | test suite and both examples | 59 of 59 tests passed, examples ran |
+
+The 3.10 and 3.13 runs reproduced the published results: every win rate and median in `headline_table.csv` to within
+0.05 percentage points, and the SPY dollar values to within a few cents. GitHub Actions also runs the offline tests and
+an example on Linux, macOS and Windows for every push. **Not tested by the author: the full pipeline on macOS or Linux**
+(only those offline tests run there).
+
+**If you run it later, expect small differences**, because the study uses whatever the data providers serve that day:
+
+- Dollar values shift a little each time a fund pays a dividend and Yahoo restates its adjusted history. When we scaled
+  SPY's history by -0.4% to simulate that, the dollar values rose about 0.4% and the percentage gaps moved by hundredths
+  of a point.
+- `scripts/spy_25y.py` covers the *last 25 complete years*, so its window rolls forward each month and its numbers and
+  chart dates follow. `scripts/why_canada.py` is pinned to the published cut-off (`AS_OF` in the script) so the SPY-vs-XIU
+  comparison stays like-for-like; edit it to roll forward.
+- Window counts (205, 85, ...) grow with the data you download.
+- The Kenneth French library has added two months since the published sanity check; its win rates move by up to
+  0.16 percentage points, with the same conclusion.
+- `requirements-lock.txt` pins the library versions used for the published results.
 
 ## Repository map
 
@@ -335,10 +356,58 @@ scripts/
   why_canada.py        SPY vs XIU comparison                -> results/why_canada*.csv
   newsletter_charts.py charts 4-6                           -> charts/chart_*  (+ local-only series in local_only/)
   check_no_raw_data.py guard: fails if any provider data is in the repo
+examples/              two runnable examples: the engine in 20 lines, and the comparison on your own prices
 tests/                 59 tests (52 on synthetic data; 7 check the real data once it is cached)
+.github/workflows/     offline tests on Linux, macOS and Windows for every push
 results/               every CSV and table behind the numbers; see results/README.md for each file's columns
 charts/                the six PNGs above
 ```
+
+## Building on this
+
+Install the package once and import it from any folder:
+
+```bash
+pip install -e ".[test]"
+```
+
+Two runnable examples are in [`examples/`](examples/):
+
+- [`quickstart.py`](examples/quickstart.py): scores buy-the-dip against monthly DCA on XIU using the engine directly
+  (about 20 lines). It prints the 98% from the results table above.
+- [`bring_your_own_prices.py`](examples/bring_your_own_prices.py): runs the same comparison on **your own price
+  series**. It makes up random prices so it runs offline; replace that block with your own data.
+
+Where to change things:
+
+| To add | Change |
+|---|---|
+| another asset | build a `Market` (see the second example), or add a function like `xiu_cad()` in [`src/dipdca/assets.py`](src/dipdca/assets.py) and list it in `scripts/run_study.py` |
+| another data source | a loader in [`src/dipdca/data.py`](src/dipdca/data.py); `load_yahoo`, `load_fred` and `load_boc` are the models |
+| a new strategy | a new `Strategy` kind in [`src/dipdca/engine.py`](src/dipdca/engine.py) **and** the matching branch in the slow reference simulator [`src/dipdca/reference.py`](src/dipdca/reference.py); the tests check that the two agree |
+| a new check | [`tests/`](tests/); `tests/helpers.py` builds synthetic markets |
+
+Keep the rule that nothing derived from a data provider's series goes into the repository (see
+[Data and licensing](#data-and-licensing)); `python scripts/check_no_raw_data.py` checks it.
+
+## Troubleshooting
+
+- **A download fails.** Yahoo, FRED, the Bank of Canada and Dartmouth are public services that sometimes refuse or throttle
+  automated requests. Each fetch retries three times, then stops with the address it could not read. Wait and rerun: files
+  already downloaded stay in `data/cache/`. Do not use `--refresh` while a source is down, because it deletes the cache first.
+- **The Dartmouth (Fama/French) server refuses to connect.** Only the data audit and the Maggiulli sanity check use it,
+  but the audit is the first step of `run_all.py`. Download `F-F_Research_Data_Factors_CSV.zip` and
+  `F-F_Research_Data_Factors_daily_CSV.zip` from the
+  [Kenneth French data library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) and save them in
+  `data/cache/` as `french_F-F_Research_Data_Factors_CSV.zip` and `french_F-F_Research_Data_Factors_daily_CSV.zip`.
+  This happened once while building the study. The main study, the SPY-only run and the charts do not need it:
+  `python scripts/run_study.py`, `python scripts/spy_25y.py`.
+- **`pip install` fails on Windows with "No such file or directory".** The folder is nested too deeply: Windows limits
+  paths to 260 characters, and `yfinance` pulls in packages with long file names. Clone into a short path such as `C:\src\`.
+- **The charts look slightly different.** The scripts ask for the Segoe UI font (Windows) and fall back to DejaVu Sans
+  elsewhere. The text is wider, a few labels sit closer together, and all six charts stay legible (we rendered them with
+  DejaVu Sans only).
+- **7 tests are skipped.** They check the real downloaded data. Run `python run_all.py` once and they run.
 
 ## How we know the code is right
 
