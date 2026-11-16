@@ -1,0 +1,7 @@
+# Direct dependencies. Exact versions used for the published results are in requirements-lock.txt
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+requests>=2.31
+yfinance>=0.2.40
+pytest>=8.0

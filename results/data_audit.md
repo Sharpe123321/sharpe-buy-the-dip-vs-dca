@@ -1,0 +1,45 @@
+# Data audit
+
+Checks: {'PASS': 30, 'INFO': 9}
+
+| series | check | status | detail |
+|---|---|---|---|
+| XIU.TO close | coverage | INFO | 6,811 rows, 1999-10-04 -> 2026-11-13 |
+| XIU.TO close | index sorted/unique | PASS | monotonic increasing, no duplicate dates |
+| XIU.TO close | no NaN / non-positive | PASS | NaN=0, <=0: 0 |
+| XIU.TO close | weekend rows | PASS | 0 rows stamped Sat/Sun |
+| XIU.TO close | gaps > 7 calendar days | PASS | none |
+| XIU.TO close | stale prices | PASS | 174 zero-return days (2.56%); 0 days that complete a 3+ day identical-close run |
+| XIU.TO close | >5 sigma moves (vs trailing 252d std) | PASS | 13 days; largest /daily return/: 2020-03-12 -12.3%, 2020-03-24 +12.3%, 2020-03-09 -10.7% |
+| XIU.TO close | split-like jumps (<-40% / >+60%) | PASS | none |
+| XIU.TO total return | own reinvestment TR vs Yahoo Adj Close (daily returns) | PASS | 6,807 of 6,810 days agree to 5e-4; 3 do not: 2000-12-27 (own +3.80% vs Yahoo +0.29%), 2003-12-29 (own +1.30% vs Yahoo +0.87%), 2004-12-29 (own -0.37% vs Yahoo -0.79%). All are late-December distributions: True. End-to-end TR ratio own 10.479 vs Yahoo 10.047 |
+| XIU.TO dividends | ex-date price drop vs TSX Composite (is each distribution a cash payment?) | INFO | 2000-12-27: dividend 3.51% of price but XIU lagged the index by only 0.71% (+11.7 sigma of daily tracking noise); 2001-12-24: dividend 1.37% of price but XIU lagged the index by only 0.55% (+3.4 sigma of daily tracking noise); 2011-09-23: dividend 0.63% of price but XIU lagged the index by only -0.07% (+2.9 sigma of daily tracking noise). The 2000-12-27 $0.46 'dividend' did not lower the unit price. Inferred: a reinvested (non-cash) distribution, which Yahoo's Adj Close does not count. Adj Close is therefore used as XIU's total-return series; the own-reinvestment version is run as a sensitivity |
+| XIU.TO total return | dividend adjustment applied (Adj Close vs raw Close) | PASS | price CAGR 6.30% vs total-return CAGR 8.88% -> dividends add 2.58%/yr (plausible for a Canadian large-cap index: 2-4%) |
+| XIU.TO dividends | distribution cadence | PASS | 107 distributions in 27.1 yrs (3.9/yr) |
+| ^SP500TR close | coverage | INFO | 9,791 rows, 1988-01-04 -> 2026-11-13 |
+| ^SP500TR close | index sorted/unique | PASS | monotonic increasing, no duplicate dates |
+| ^SP500TR close | no NaN / non-positive | PASS | NaN=0, <=0: 0 |
+| ^SP500TR close | weekend rows | PASS | 0 rows stamped Sat/Sun |
+| ^SP500TR close | gaps > 7 calendar days | PASS | none |
+| ^SP500TR close | stale prices | PASS | 5 zero-return days (0.05%); 0 days that complete a 3+ day identical-close run |
+| ^SP500TR close | >5 sigma moves (vs trailing 252d std) | PASS | 23 days; largest /daily return/: 2020-03-16 -12.0%, 2008-10-13 +11.6%, 2008-10-28 +10.8% |
+| ^SP500TR close | split-like jumps (<-40% / >+60%) | PASS | none |
+| ^SP500TR vs ^GSPC | independent cross-check (daily returns since 1988) | PASS | corr 0.99962; TR minus price return +2.10%/yr (= dividend yield, expected ~1.5-2.5%) |
+| SPY (Yahoo) vs ^SP500TR | why SPY is NOT used | INFO | daily-return corr 0.973 before 2009 but 0.9984 after: Yahoo's old SPY closes disagree with the index on volatile days (e.g. 2000-01-07 SPY +5.8% vs index +2.7%), while ^SP500TR matches ^GSPC. SPY history is therefore avoided in the main study; the SPY-only run (METHODOLOGY.md section 10) uses it anyway and cross-checks it against ^SP500TR |
+| DEXCAUS | coverage | INFO | 14,011 obs, 1971-01-04 -> 2026-11-06 (CAD per USD) |
+| DEXCAUS | range plausibility | PASS | min 0.9168, max 1.6128 |
+| DEXCAUS aligned to S&P days | forward-fill staleness | PASS | 92 S&P days use a prior-day rate (US holidays with no H.10 print); max staleness 3 calendar days (excluding the last two weeks of data, which lag by the weekly H.10 release and fall in the dropped partial month; there the lag is 7 days) |
+| DEXCAUS vs BoC FXUSDCAD | independent cross-check (2017+) | PASS | 2,401 common days; mean /diff/ 0.0009 CAD, max 0.0090; level corr 0.9997 |
+| BoC 3m T-bill | coverage | INFO | 6,465 obs, 2001-01-02 -> 2026-11-12; range 0.00% to 5.46% |
+| BoC 3m T-bill | range plausibility | PASS | min 0.00%, max 5.46% |
+| FRED/IMF vs BoC T-bill | splice validation (monthly overlap 2001-2017) | PASS | 196 months; mean /diff/ 0.05 pp, max 0.68 pp; corr 0.9981 |
+| cash rate on XIU days | rate staleness (as-of lookup) | PASS | max 30 calendar days (pre-2001 monthly FRED values are lagged one month by construction); 254 days older than 5 days |
+| cash rate on S&P 500 days | rate staleness (as-of lookup) | PASS | max 30 calendar days (pre-2001 monthly FRED values are lagged one month by construction); 2656 days older than 5 days |
+| French CRSP daily | coverage | INFO | 26,296 rows, 1926-07-01 -> 2026-07-31 |
+| French CRSP monthly | coverage | INFO | 1,201 rows, 1926-07-31 -> 2026-07-31 |
+| French daily vs monthly | cross-implementation (compounded daily vs monthly) | PASS | 1201 months; mean /diff/ 4.70e-04, max 4.00e-03 |
+| French CRSP vs ^SP500TR | proxy quality (monthly returns since 1988) | PASS | 462 months; corr 0.9887; mean monthly gap (crsp - sp500) +0.0076% |
+| all series | look-ahead: cash rates | PASS | interest over (d[i-1], d[i]] uses the rate published on/before d[i-1]; pre-2001 monthly values are only used from the 1st of the following month |
+| all series | look-ahead: dip signal | PASS | signal read from closes up to day t; fills at the close of t+1 (enforced and unit-tested) |
+| S&P 500 in CAD | timing mismatch | INFO | H.10 CAD/USD is a ~noon New York rate; the S&P close is 4pm. Up to ~4h of intraday FX/equity timing noise per day; irrelevant for monthly-horizon results |
+| all series | survivorship | PASS | single broad-index ETFs / indices (no stock selection), so no survivorship bias |

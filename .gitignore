@@ -1,0 +1,21 @@
+# Raw market data is third-party (Yahoo, FRED, Bank of Canada, Fama/French) and must NOT be committed.
+# The code fetches it at run time into data/cache/.
+data/
+data_cache/
+
+# Day-by-day portfolio series (they let anyone recover the underlying price series): local only
+local_only/
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+
+# Secrets, in case any ever appear in this folder
+.env
+.env.*
+*.key
+*.pem

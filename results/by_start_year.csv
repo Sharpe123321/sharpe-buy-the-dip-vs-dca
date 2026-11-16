@@ -1,0 +1,416 @@
+asset,horizon_years,strategy,rule,start_year,n_windows,pct_beats_monthly,median_diff_pct,avg_months_in_cash
+"S&P 500, CAD",10,dip_10pct,threshold,1988,11,0.000,-28.928,113.804
+"S&P 500, CAD",10,dip_10pct,threshold,1989,12,0.000,-33.720,112.151
+"S&P 500, CAD",10,dip_10pct,threshold,1990,12,0.000,-41.685,112.071
+"S&P 500, CAD",10,dip_10pct,threshold,1991,12,0.000,-44.968,110.831
+"S&P 500, CAD",10,dip_10pct,threshold,1992,12,0.000,-38.163,99.480
+"S&P 500, CAD",10,dip_10pct,threshold,1993,12,0.000,-30.319,87.989
+"S&P 500, CAD",10,dip_10pct,threshold,1994,12,0.000,-22.365,76.501
+"S&P 500, CAD",10,dip_10pct,threshold,1995,12,0.000,-13.167,65.051
+"S&P 500, CAD",10,dip_10pct,threshold,1996,12,0.000,-5.789,53.547
+"S&P 500, CAD",10,dip_10pct,threshold,1997,12,33.333,-0.415,42.127
+"S&P 500, CAD",10,dip_10pct,threshold,1998,12,100.000,0.623,31.055
+"S&P 500, CAD",10,dip_10pct,threshold,1999,12,100.000,0.391,21.284
+"S&P 500, CAD",10,dip_10pct,threshold,2000,12,91.667,0.179,10.658
+"S&P 500, CAD",10,dip_10pct,threshold,2001,12,8.333,-0.028,5.363
+"S&P 500, CAD",10,dip_10pct,threshold,2002,12,0.000,-0.037,5.279
+"S&P 500, CAD",10,dip_10pct,threshold,2003,12,0.000,-0.105,7.548
+"S&P 500, CAD",10,dip_10pct,threshold,2004,12,0.000,-0.995,18.248
+"S&P 500, CAD",10,dip_10pct,threshold,2005,12,0.000,-3.056,29.637
+"S&P 500, CAD",10,dip_10pct,threshold,2006,12,0.000,-3.152,40.438
+"S&P 500, CAD",10,dip_10pct,threshold,2007,12,0.000,-3.779,51.734
+"S&P 500, CAD",10,dip_10pct,threshold,2008,12,0.000,-5.179,63.214
+"S&P 500, CAD",10,dip_10pct,threshold,2009,12,0.000,-5.398,73.303
+"S&P 500, CAD",10,dip_10pct,threshold,2010,12,0.000,-6.296,82.815
+"S&P 500, CAD",10,dip_10pct,threshold,2011,12,0.000,-7.874,93.259
+"S&P 500, CAD",10,dip_10pct,threshold,2012,12,0.000,-9.745,101.295
+"S&P 500, CAD",10,dip_10pct,threshold,2013,12,0.000,-10.543,102.872
+"S&P 500, CAD",10,dip_10pct,threshold,2014,12,0.000,-6.933,103.239
+"S&P 500, CAD",10,dip_10pct,threshold,2015,12,0.000,-5.710,102.155
+"S&P 500, CAD",10,dip_10pct,threshold,2016,11,0.000,-5.890,102.090
+"S&P 500, CAD",10,dip_20pct,threshold,1988,11,0.000,-26.094,119.264
+"S&P 500, CAD",10,dip_20pct,threshold,1989,12,0.000,-40.259,119.247
+"S&P 500, CAD",10,dip_20pct,threshold,1990,12,0.000,-54.346,119.400
+"S&P 500, CAD",10,dip_20pct,threshold,1991,12,0.000,-44.982,118.598
+"S&P 500, CAD",10,dip_20pct,threshold,1992,12,0.000,-37.684,111.666
+"S&P 500, CAD",10,dip_20pct,threshold,1993,12,0.000,-29.432,100.605
+"S&P 500, CAD",10,dip_20pct,threshold,1994,12,0.000,-20.986,89.117
+"S&P 500, CAD",10,dip_20pct,threshold,1995,12,0.000,-11.193,77.667
+"S&P 500, CAD",10,dip_20pct,threshold,1996,12,8.333,-3.200,66.163
+"S&P 500, CAD",10,dip_20pct,threshold,1997,12,100.000,2.938,58.434
+"S&P 500, CAD",10,dip_20pct,threshold,1998,12,100.000,4.548,48.389
+"S&P 500, CAD",10,dip_20pct,threshold,1999,12,100.000,3.569,36.945
+"S&P 500, CAD",10,dip_20pct,threshold,2000,12,100.000,1.745,25.426
+"S&P 500, CAD",10,dip_20pct,threshold,2001,12,100.000,0.366,15.387
+"S&P 500, CAD",10,dip_20pct,threshold,2002,12,100.000,0.140,10.823
+"S&P 500, CAD",10,dip_20pct,threshold,2003,12,25.000,-0.189,15.537
+"S&P 500, CAD",10,dip_20pct,threshold,2004,12,0.000,-1.593,27.020
+"S&P 500, CAD",10,dip_20pct,threshold,2005,12,0.000,-4.139,38.472
+"S&P 500, CAD",10,dip_20pct,threshold,2006,12,0.000,-5.466,49.979
+"S&P 500, CAD",10,dip_20pct,threshold,2007,12,0.000,-8.709,57.684
+"S&P 500, CAD",10,dip_20pct,threshold,2008,12,0.000,-12.403,67.748
+"S&P 500, CAD",10,dip_20pct,threshold,2009,12,0.000,-16.728,79.195
+"S&P 500, CAD",10,dip_20pct,threshold,2010,12,0.000,-19.169,89.618
+"S&P 500, CAD",10,dip_20pct,threshold,2011,12,0.000,-22.219,100.553
+"S&P 500, CAD",10,dip_20pct,threshold,2012,12,0.000,-26.076,111.781
+"S&P 500, CAD",10,dip_20pct,threshold,2013,12,0.000,-24.152,117.788
+"S&P 500, CAD",10,dip_20pct,threshold,2014,12,0.000,-18.162,117.793
+"S&P 500, CAD",10,dip_20pct,threshold,2015,12,0.000,-14.272,117.818
+"S&P 500, CAD",10,dip_20pct,threshold,2016,11,0.000,-13.100,117.788
+"S&P 500, CAD",10,dip_30pct,threshold,1988,11,0.000,-59.836,119.921
+"S&P 500, CAD",10,dip_30pct,threshold,1989,12,0.000,-62.752,119.904
+"S&P 500, CAD",10,dip_30pct,threshold,1990,12,0.000,-61.222,119.948
+"S&P 500, CAD",10,dip_30pct,threshold,1991,12,0.000,-47.566,119.877
+"S&P 500, CAD",10,dip_30pct,threshold,1992,12,0.000,-26.746,118.286
+"S&P 500, CAD",10,dip_30pct,threshold,1993,12,0.000,-18.212,108.359
+"S&P 500, CAD",10,dip_30pct,threshold,1994,12,0.000,-9.872,98.916
+"S&P 500, CAD",10,dip_30pct,threshold,1995,12,50.000,-0.273,90.533
+"S&P 500, CAD",10,dip_30pct,threshold,1996,12,100.000,7.109,85.470
+"S&P 500, CAD",10,dip_30pct,threshold,1997,12,100.000,11.935,83.611
+"S&P 500, CAD",10,dip_30pct,threshold,1998,12,100.000,13.890,78.776
+"S&P 500, CAD",10,dip_30pct,threshold,1999,12,100.000,10.742,67.828
+"S&P 500, CAD",10,dip_30pct,threshold,2000,12,100.000,6.928,56.309
+"S&P 500, CAD",10,dip_30pct,threshold,2001,12,100.000,3.854,45.101
+"S&P 500, CAD",10,dip_30pct,threshold,2002,12,100.000,2.217,40.542
+"S&P 500, CAD",10,dip_30pct,threshold,2003,12,58.333,0.228,50.489
+"S&P 500, CAD",10,dip_30pct,threshold,2004,12,0.000,-2.763,59.910
+"S&P 500, CAD",10,dip_30pct,threshold,2005,12,0.000,-6.750,68.307
+"S&P 500, CAD",10,dip_30pct,threshold,2006,12,0.000,-8.782,73.336
+"S&P 500, CAD",10,dip_30pct,threshold,2007,12,0.000,-14.706,75.170
+"S&P 500, CAD",10,dip_30pct,threshold,2008,12,0.000,-20.114,80.066
+"S&P 500, CAD",10,dip_30pct,threshold,2009,12,0.000,-25.905,91.023
+"S&P 500, CAD",10,dip_30pct,threshold,2010,12,0.000,-33.383,102.543
+"S&P 500, CAD",10,dip_30pct,threshold,2011,12,0.000,-48.646,113.815
+"S&P 500, CAD",10,dip_30pct,threshold,2012,12,0.000,-50.444,119.923
+"S&P 500, CAD",10,dip_30pct,threshold,2013,12,0.000,-45.906,119.923
+"S&P 500, CAD",10,dip_30pct,threshold,2014,12,0.000,-49.804,119.929
+"S&P 500, CAD",10,dip_30pct,threshold,2015,12,0.000,-51.451,119.953
+"S&P 500, CAD",10,dip_30pct,threshold,2016,11,0.000,-51.859,119.924
+"S&P 500, CAD",10,dip_5pct,threshold,1988,11,0.000,-3.262,97.123
+"S&P 500, CAD",10,dip_5pct,threshold,1989,12,0.000,-3.514,95.452
+"S&P 500, CAD",10,dip_5pct,threshold,1990,12,0.000,-4.216,93.640
+"S&P 500, CAD",10,dip_5pct,threshold,1991,12,0.000,-5.306,92.274
+"S&P 500, CAD",10,dip_5pct,threshold,1992,12,0.000,-4.481,81.936
+"S&P 500, CAD",10,dip_5pct,threshold,1993,12,0.000,-2.794,70.445
+"S&P 500, CAD",10,dip_5pct,threshold,1994,12,0.000,-3.223,59.526
+"S&P 500, CAD",10,dip_5pct,threshold,1995,12,0.000,-1.297,49.117
+"S&P 500, CAD",10,dip_5pct,threshold,1996,12,0.000,-0.466,38.248
+"S&P 500, CAD",10,dip_5pct,threshold,1997,12,66.667,0.110,28.225
+"S&P 500, CAD",10,dip_5pct,threshold,1998,12,100.000,0.290,19.433
+"S&P 500, CAD",10,dip_5pct,threshold,1999,12,100.000,0.230,12.394
+"S&P 500, CAD",10,dip_5pct,threshold,2000,12,83.333,0.072,8.170
+"S&P 500, CAD",10,dip_5pct,threshold,2001,12,8.333,-0.028,5.309
+"S&P 500, CAD",10,dip_5pct,threshold,2002,12,0.000,-0.037,5.279
+"S&P 500, CAD",10,dip_5pct,threshold,2003,12,0.000,-0.074,6.541
+"S&P 500, CAD",10,dip_5pct,threshold,2004,12,0.000,-0.355,15.173
+"S&P 500, CAD",10,dip_5pct,threshold,2005,12,0.000,-0.387,24.712
+"S&P 500, CAD",10,dip_5pct,threshold,2006,12,0.000,-0.319,30.330
+"S&P 500, CAD",10,dip_5pct,threshold,2007,12,0.000,-0.557,39.291
+"S&P 500, CAD",10,dip_5pct,threshold,2008,12,0.000,-0.620,46.721
+"S&P 500, CAD",10,dip_5pct,threshold,2009,12,0.000,-0.595,52.539
+"S&P 500, CAD",10,dip_5pct,threshold,2010,12,0.000,-0.686,60.016
+"S&P 500, CAD",10,dip_5pct,threshold,2011,12,0.000,-0.787,67.299
+"S&P 500, CAD",10,dip_5pct,threshold,2012,12,0.000,-0.945,72.756
+"S&P 500, CAD",10,dip_5pct,threshold,2013,12,0.000,-1.066,72.449
+"S&P 500, CAD",10,dip_5pct,threshold,2014,12,0.000,-0.556,72.118
+"S&P 500, CAD",10,dip_5pct,threshold,2015,12,0.000,-0.560,70.604
+"S&P 500, CAD",10,dip_5pct,threshold,2016,11,0.000,-0.943,73.752
+"S&P 500, CAD",10,perfect_timing,hindsight,1988,11,100.000,1.131,53.107
+"S&P 500, CAD",10,perfect_timing,hindsight,1989,12,100.000,1.435,51.439
+"S&P 500, CAD",10,perfect_timing,hindsight,1990,12,100.000,1.223,51.775
+"S&P 500, CAD",10,perfect_timing,hindsight,1991,12,100.000,1.088,54.527
+"S&P 500, CAD",10,perfect_timing,hindsight,1992,12,100.000,2.527,61.175
+"S&P 500, CAD",10,perfect_timing,hindsight,1993,12,100.000,5.311,69.993
+"S&P 500, CAD",10,perfect_timing,hindsight,1994,12,100.000,3.507,78.045
+"S&P 500, CAD",10,perfect_timing,hindsight,1995,12,100.000,4.531,84.326
+"S&P 500, CAD",10,perfect_timing,hindsight,1996,12,100.000,5.180,92.112
+"S&P 500, CAD",10,perfect_timing,hindsight,1997,12,50.000,0.725,99.633
+"S&P 500, CAD",10,perfect_timing,hindsight,1998,12,100.000,18.122,108.411
+"S&P 500, CAD",10,perfect_timing,hindsight,1999,12,100.000,39.596,115.535
+"S&P 500, CAD",10,perfect_timing,hindsight,2000,12,100.000,26.428,119.274
+"S&P 500, CAD",10,perfect_timing,hindsight,2001,12,100.000,8.527,119.921
+"S&P 500, CAD",10,perfect_timing,hindsight,2002,12,16.667,-5.232,119.948
+"S&P 500, CAD",10,perfect_timing,hindsight,2003,12,41.667,-10.726,118.998
+"S&P 500, CAD",10,perfect_timing,hindsight,2004,12,100.000,18.268,111.264
+"S&P 500, CAD",10,perfect_timing,hindsight,2005,12,100.000,11.280,103.214
+"S&P 500, CAD",10,perfect_timing,hindsight,2006,12,100.000,3.699,98.749
+"S&P 500, CAD",10,perfect_timing,hindsight,2007,12,0.000,-4.965,91.956
+"S&P 500, CAD",10,perfect_timing,hindsight,2008,12,0.000,-13.564,85.298
+"S&P 500, CAD",10,perfect_timing,hindsight,2009,12,0.000,-17.457,81.391
+"S&P 500, CAD",10,perfect_timing,hindsight,2010,12,0.000,-12.856,74.538
+"S&P 500, CAD",10,perfect_timing,hindsight,2011,12,0.000,-8.089,66.637
+"S&P 500, CAD",10,perfect_timing,hindsight,2012,12,0.000,-2.827,60.564
+"S&P 500, CAD",10,perfect_timing,hindsight,2013,12,50.000,-0.057,60.548
+"S&P 500, CAD",10,perfect_timing,hindsight,2014,12,100.000,0.248,61.495
+"S&P 500, CAD",10,perfect_timing,hindsight,2015,12,100.000,0.256,62.415
+"S&P 500, CAD",10,perfect_timing,hindsight,2016,11,100.000,0.568,60.894
+"S&P 500, CAD",20,dip_10pct,threshold,1988,11,0.000,-22.110,144.475
+"S&P 500, CAD",20,dip_10pct,threshold,1989,12,0.000,-25.147,133.500
+"S&P 500, CAD",20,dip_10pct,threshold,1990,12,0.000,-29.596,122.779
+"S&P 500, CAD",20,dip_10pct,threshold,1991,12,0.000,-29.949,116.194
+"S&P 500, CAD",20,dip_10pct,threshold,1992,12,0.000,-23.805,104.758
+"S&P 500, CAD",20,dip_10pct,threshold,1993,12,0.000,-18.079,95.537
+"S&P 500, CAD",20,dip_10pct,threshold,1994,12,0.000,-13.215,94.749
+"S&P 500, CAD",20,dip_10pct,threshold,1995,12,0.000,-8.631,94.689
+"S&P 500, CAD",20,dip_10pct,threshold,1996,12,0.000,-4.557,93.985
+"S&P 500, CAD",20,dip_10pct,threshold,1997,12,0.000,-2.018,93.862
+"S&P 500, CAD",20,dip_10pct,threshold,1998,12,0.000,-1.962,94.270
+"S&P 500, CAD",20,dip_10pct,threshold,1999,12,0.000,-1.977,94.587
+"S&P 500, CAD",20,dip_10pct,threshold,2000,12,0.000,-2.228,93.473
+"S&P 500, CAD",20,dip_10pct,threshold,2001,12,0.000,-2.585,98.623
+"S&P 500, CAD",20,dip_10pct,threshold,2002,12,0.000,-2.814,106.574
+"S&P 500, CAD",20,dip_10pct,threshold,2003,12,0.000,-3.016,110.464
+"S&P 500, CAD",20,dip_10pct,threshold,2004,12,0.000,-3.419,121.558
+"S&P 500, CAD",20,dip_10pct,threshold,2005,12,0.000,-3.623,131.852
+"S&P 500, CAD",20,dip_10pct,threshold,2006,11,0.000,-3.889,142.124
+"S&P 500, CAD",20,dip_20pct,threshold,1988,11,0.000,-19.971,167.243
+"S&P 500, CAD",20,dip_20pct,threshold,1989,12,0.000,-24.905,156.268
+"S&P 500, CAD",20,dip_20pct,threshold,1990,12,0.000,-31.562,144.887
+"S&P 500, CAD",20,dip_20pct,threshold,1991,12,0.000,-29.796,134.015
+"S&P 500, CAD",20,dip_20pct,threshold,1992,12,0.000,-23.441,122.500
+"S&P 500, CAD",20,dip_20pct,threshold,1993,12,0.000,-17.588,116.142
+"S&P 500, CAD",20,dip_20pct,threshold,1994,12,0.000,-12.683,116.137
+"S&P 500, CAD",20,dip_20pct,threshold,1995,12,0.000,-8.018,116.140
+"S&P 500, CAD",20,dip_20pct,threshold,1996,12,0.000,-4.128,116.142
+"S&P 500, CAD",20,dip_20pct,threshold,1997,12,0.000,-2.774,116.137
+"S&P 500, CAD",20,dip_20pct,threshold,1998,12,0.000,-3.054,116.137
+"S&P 500, CAD",20,dip_20pct,threshold,1999,12,0.000,-4.750,116.140
+"S&P 500, CAD",20,dip_20pct,threshold,2000,12,0.000,-5.923,115.044
+"S&P 500, CAD",20,dip_20pct,threshold,2001,12,0.000,-6.958,115.940
+"S&P 500, CAD",20,dip_20pct,threshold,2002,12,0.000,-7.363,122.604
+"S&P 500, CAD",20,dip_20pct,threshold,2003,12,0.000,-7.741,133.388
+"S&P 500, CAD",20,dip_20pct,threshold,2004,12,0.000,-8.665,144.884
+"S&P 500, CAD",20,dip_20pct,threshold,2005,12,0.000,-9.563,156.353
+"S&P 500, CAD",20,dip_20pct,threshold,2006,11,0.000,-11.058,167.356
+"S&P 500, CAD",20,dip_30pct,threshold,1988,11,0.000,-37.973,198.389
+"S&P 500, CAD",20,dip_30pct,threshold,1989,12,0.000,-33.173,187.808
+"S&P 500, CAD",20,dip_30pct,threshold,1990,12,0.000,-28.387,176.318
+"S&P 500, CAD",20,dip_30pct,threshold,1991,12,0.000,-22.021,165.040
+"S&P 500, CAD",20,dip_30pct,threshold,1992,12,0.000,-15.748,158.861
+"S&P 500, CAD",20,dip_30pct,threshold,1993,12,0.000,-10.743,158.847
+"S&P 500, CAD",20,dip_30pct,threshold,1994,12,0.000,-6.809,158.847
+"S&P 500, CAD",20,dip_30pct,threshold,1995,12,0.000,-3.242,158.850
+"S&P 500, CAD",20,dip_30pct,threshold,1996,12,41.667,-0.095,158.853
+"S&P 500, CAD",20,dip_30pct,threshold,1997,12,75.000,0.214,158.847
+"S&P 500, CAD",20,dip_30pct,threshold,1998,12,0.000,-1.387,158.847
+"S&P 500, CAD",20,dip_30pct,threshold,1999,12,0.000,-4.267,158.850
+"S&P 500, CAD",20,dip_30pct,threshold,2000,12,0.000,-7.852,158.853
+"S&P 500, CAD",20,dip_30pct,threshold,2001,12,0.000,-13.170,158.916
+"S&P 500, CAD",20,dip_30pct,threshold,2002,12,0.000,-15.287,160.526
+"S&P 500, CAD",20,dip_30pct,threshold,2003,12,0.000,-17.304,170.480
+"S&P 500, CAD",20,dip_30pct,threshold,2004,12,0.000,-21.866,179.910
+"S&P 500, CAD",20,dip_30pct,threshold,2005,12,0.000,-25.363,188.323
+"S&P 500, CAD",20,dip_30pct,threshold,2006,11,0.000,-30.607,193.162
+"S&P 500, CAD",20,dip_5pct,threshold,1988,11,0.000,-2.473,116.244
+"S&P 500, CAD",20,dip_5pct,threshold,1989,12,0.000,-2.573,107.877
+"S&P 500, CAD",20,dip_5pct,threshold,1990,12,0.000,-2.978,101.829
+"S&P 500, CAD",20,dip_5pct,threshold,1991,12,0.000,-3.546,97.582
+"S&P 500, CAD",20,dip_5pct,threshold,1992,12,0.000,-2.807,87.214
+"S&P 500, CAD",20,dip_5pct,threshold,1993,12,0.000,-1.725,76.986
+"S&P 500, CAD",20,dip_5pct,threshold,1994,12,0.000,-1.987,74.700
+"S&P 500, CAD",20,dip_5pct,threshold,1995,12,0.000,-0.889,73.829
+"S&P 500, CAD",20,dip_5pct,threshold,1996,12,0.000,-0.399,68.578
+"S&P 500, CAD",20,dip_5pct,threshold,1997,12,0.000,-0.190,67.515
+"S&P 500, CAD",20,dip_5pct,threshold,1998,12,0.000,-0.125,66.155
+"S&P 500, CAD",20,dip_5pct,threshold,1999,12,0.000,-0.094,64.934
+"S&P 500, CAD",20,dip_5pct,threshold,2000,12,0.000,-0.201,68.186
+"S&P 500, CAD",20,dip_5pct,threshold,2001,12,0.000,-0.284,72.608
+"S&P 500, CAD",20,dip_5pct,threshold,2002,12,0.000,-0.294,78.034
+"S&P 500, CAD",20,dip_5pct,threshold,2003,12,0.000,-0.343,79.017
+"S&P 500, CAD",20,dip_5pct,threshold,2004,12,0.000,-0.408,87.343
+"S&P 500, CAD",20,dip_5pct,threshold,2005,12,0.000,-0.422,95.354
+"S&P 500, CAD",20,dip_5pct,threshold,2006,11,0.000,-0.451,103.783
+"S&P 500, CAD",20,perfect_timing,hindsight,1988,11,100.000,5.109,161.840
+"S&P 500, CAD",20,perfect_timing,hindsight,1989,12,100.000,11.103,166.825
+"S&P 500, CAD",20,perfect_timing,hindsight,1990,12,100.000,8.207,170.927
+"S&P 500, CAD",20,perfect_timing,hindsight,1991,12,100.000,4.564,174.519
+"S&P 500, CAD",20,perfect_timing,hindsight,1992,12,75.000,0.607,181.191
+"S&P 500, CAD",20,perfect_timing,hindsight,1993,12,41.667,-2.104,189.062
+"S&P 500, CAD",20,perfect_timing,hindsight,1994,12,100.000,23.154,189.380
+"S&P 500, CAD",20,perfect_timing,hindsight,1995,12,100.000,25.609,187.595
+"S&P 500, CAD",20,perfect_timing,hindsight,1996,12,100.000,27.693,190.924
+"S&P 500, CAD",20,perfect_timing,hindsight,1997,12,100.000,29.619,191.663
+"S&P 500, CAD",20,perfect_timing,hindsight,1998,12,100.000,31.115,193.774
+"S&P 500, CAD",20,perfect_timing,hindsight,1999,12,100.000,32.242,196.323
+"S&P 500, CAD",20,perfect_timing,hindsight,2000,12,100.000,32.960,193.002
+"S&P 500, CAD",20,perfect_timing,hindsight,2001,12,100.000,28.134,185.725
+"S&P 500, CAD",20,perfect_timing,hindsight,2002,12,100.000,22.518,179.696
+"S&P 500, CAD",20,perfect_timing,hindsight,2003,12,100.000,18.523,179.066
+"S&P 500, CAD",20,perfect_timing,hindsight,2004,12,100.000,14.044,172.660
+"S&P 500, CAD",20,perfect_timing,hindsight,2005,12,100.000,8.846,165.457
+"S&P 500, CAD",20,perfect_timing,hindsight,2006,11,100.000,3.297,159.660
+"S&P 500, CAD",30,dip_10pct,threshold,1988,11,0.000,-19.608,208.167
+"S&P 500, CAD",30,dip_10pct,threshold,1989,12,0.000,-22.223,206.804
+"S&P 500, CAD",30,dip_10pct,threshold,1990,12,0.000,-26.260,205.593
+"S&P 500, CAD",30,dip_10pct,threshold,1991,12,0.000,-26.897,209.454
+"S&P 500, CAD",30,dip_10pct,threshold,1992,12,0.000,-21.976,206.053
+"S&P 500, CAD",30,dip_10pct,threshold,1993,12,0.000,-17.281,198.453
+"S&P 500, CAD",30,dip_10pct,threshold,1994,12,0.000,-12.996,198.059
+"S&P 500, CAD",30,dip_10pct,threshold,1995,12,0.000,-8.238,196.903
+"S&P 500, CAD",30,dip_10pct,threshold,1996,11,0.000,-4.934,196.149
+"S&P 500, CAD",30,dip_20pct,threshold,1988,11,0.000,-18.883,235.469
+"S&P 500, CAD",30,dip_20pct,threshold,1989,12,0.000,-23.585,235.463
+"S&P 500, CAD",30,dip_20pct,threshold,1990,12,0.000,-29.688,234.505
+"S&P 500, CAD",30,dip_20pct,threshold,1991,12,0.000,-28.748,234.568
+"S&P 500, CAD",30,dip_20pct,threshold,1992,12,0.000,-23.759,234.281
+"S&P 500, CAD",30,dip_20pct,threshold,1993,12,0.000,-19.074,233.993
+"S&P 500, CAD",30,dip_20pct,threshold,1994,12,0.000,-14.893,234.001
+"S&P 500, CAD",30,dip_20pct,threshold,1995,12,0.000,-10.361,234.021
+"S&P 500, CAD",30,dip_20pct,threshold,1996,11,0.000,-7.397,233.997
+"S&P 500, CAD",30,dip_30pct,threshold,1988,11,0.000,-35.366,278.837
+"S&P 500, CAD",30,dip_30pct,threshold,1989,12,0.000,-31.977,278.831
+"S&P 500, CAD",30,dip_30pct,threshold,1990,12,0.000,-29.028,278.861
+"S&P 500, CAD",30,dip_30pct,threshold,1991,12,0.000,-25.702,278.856
+"S&P 500, CAD",30,dip_30pct,threshold,1992,12,0.000,-21.134,278.845
+"S&P 500, CAD",30,dip_30pct,threshold,1993,12,0.000,-17.800,278.839
+"S&P 500, CAD",30,dip_30pct,threshold,1994,12,0.000,-15.787,278.847
+"S&P 500, CAD",30,dip_30pct,threshold,1995,12,0.000,-13.015,278.867
+"S&P 500, CAD",30,dip_30pct,threshold,1996,11,0.000,-12.212,278.843
+"S&P 500, CAD",30,dip_5pct,threshold,1988,11,0.000,-2.196,163.241
+"S&P 500, CAD",30,dip_5pct,threshold,1989,12,0.000,-2.282,160.416
+"S&P 500, CAD",30,dip_5pct,threshold,1990,12,0.000,-2.648,161.845
+"S&P 500, CAD",30,dip_5pct,threshold,1991,12,0.000,-3.165,164.882
+"S&P 500, CAD",30,dip_5pct,threshold,1992,12,0.000,-2.565,159.970
+"S&P 500, CAD",30,dip_5pct,threshold,1993,12,0.000,-1.616,149.462
+"S&P 500, CAD",30,dip_5pct,threshold,1994,12,0.000,-1.835,146.869
+"S&P 500, CAD",30,dip_5pct,threshold,1995,12,0.000,-0.850,144.471
+"S&P 500, CAD",30,dip_5pct,threshold,1996,11,0.000,-0.463,142.462
+"S&P 500, CAD",30,perfect_timing,hindsight,1988,11,100.000,11.047,246.905
+"S&P 500, CAD",30,perfect_timing,hindsight,1989,12,100.000,12.540,247.614
+"S&P 500, CAD",30,perfect_timing,hindsight,1990,12,100.000,13.551,244.654
+"S&P 500, CAD",30,perfect_timing,hindsight,1991,12,100.000,15.062,240.323
+"S&P 500, CAD",30,perfect_timing,hindsight,1992,12,100.000,16.796,240.939
+"S&P 500, CAD",30,perfect_timing,hindsight,1993,12,100.000,18.537,249.131
+"S&P 500, CAD",30,perfect_timing,hindsight,1994,12,100.000,20.498,250.776
+"S&P 500, CAD",30,perfect_timing,hindsight,1995,12,100.000,22.758,249.837
+"S&P 500, CAD",30,perfect_timing,hindsight,1996,11,100.000,24.729,251.574
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,1999,2,100.000,0.486,45.914
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2000,12,100.000,0.650,39.808
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2001,12,100.000,0.651,40.235
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2002,12,100.000,0.884,41.977
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2003,12,100.000,1.040,44.375
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2004,12,100.000,0.748,54.007
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2005,12,100.000,1.248,63.023
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2006,12,100.000,1.522,58.752
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2007,12,100.000,1.310,58.193
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2008,12,58.333,0.173,61.002
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2009,12,100.000,0.925,69.361
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2010,12,100.000,1.898,78.064
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2011,12,100.000,1.449,82.535
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2012,12,100.000,1.449,90.804
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2013,12,100.000,1.819,94.021
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2014,12,100.000,2.659,94.793
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2015,12,100.000,1.423,95.962
+"XIU (TSX 60 ETF), CAD",10,dip_10pct,threshold,2016,11,100.000,1.028,102.469
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,1999,2,0.000,-0.335,57.248
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2000,12,25.000,-0.090,53.385
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2001,12,25.000,-0.787,58.168
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2002,12,100.000,0.710,67.055
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2003,12,83.333,0.598,77.812
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2004,12,0.000,-1.356,89.251
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2005,12,33.333,-0.998,97.084
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2006,12,100.000,5.335,96.956
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2007,12,100.000,4.938,96.917
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2008,12,100.000,3.422,97.240
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2009,12,100.000,1.732,105.446
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2010,12,100.000,7.104,113.049
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2011,12,100.000,4.641,114.637
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2012,12,100.000,3.664,117.221
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2013,12,100.000,4.980,117.916
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2014,12,75.000,2.763,117.922
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2015,12,0.000,-5.003,117.944
+"XIU (TSX 60 ETF), CAD",10,dip_20pct,threshold,2016,11,0.000,-14.064,118.296
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,1999,2,100.000,8.001,76.994
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2000,12,100.000,7.199,76.939
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2001,12,100.000,4.369,80.799
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2002,12,100.000,5.676,92.093
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2003,12,100.000,4.570,103.570
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2004,12,25.000,-1.081,110.415
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2005,12,33.333,-1.342,111.105
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2006,12,33.333,-1.905,111.138
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2007,12,0.000,-11.494,111.143
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2008,12,0.000,-18.933,111.332
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2009,12,0.000,-26.510,117.982
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2010,12,0.000,-3.709,119.578
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2011,12,0.000,-2.721,119.444
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2012,12,50.000,-0.305,119.428
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2013,12,100.000,2.748,119.428
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2014,12,91.667,2.276,119.433
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2015,12,0.000,-2.998,119.455
+"XIU (TSX 60 ETF), CAD",10,dip_30pct,threshold,2016,11,0.000,-10.738,119.419
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,1999,2,0.000,-0.357,29.552
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2000,12,0.000,-0.108,25.615
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2001,12,0.000,-0.059,24.465
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2002,12,83.333,0.023,24.564
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2003,12,100.000,0.058,24.654
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2004,12,16.667,-0.103,31.420
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2005,12,16.667,-0.061,38.330
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2006,12,41.667,-0.033,35.688
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2007,12,0.000,-0.212,36.400
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2008,12,0.000,-0.333,41.421
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2009,12,0.000,-0.215,47.973
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2010,12,0.000,-0.120,55.770
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2011,12,0.000,-0.563,61.692
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2012,12,0.000,-0.925,69.656
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2013,12,0.000,-1.027,70.817
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2014,12,0.000,-0.792,70.374
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2015,12,0.000,-1.500,73.823
+"XIU (TSX 60 ETF), CAD",10,dip_5pct,threshold,2016,11,0.000,-1.933,81.909
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,1999,2,100.000,0.907,96.920
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2000,12,66.667,0.383,101.580
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2001,12,0.000,-7.494,103.688
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2002,12,0.000,-10.885,103.841
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2003,12,0.000,-11.789,104.422
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2004,12,0.000,-6.858,98.620
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2005,12,0.000,-4.145,93.823
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2006,12,0.000,-3.865,96.471
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2007,12,0.000,-3.571,99.398
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2008,12,0.000,-3.948,97.810
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2009,12,0.000,-5.723,95.704
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2010,12,0.000,-3.437,89.889
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2011,12,0.000,-2.696,83.688
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2012,12,0.000,-1.020,77.095
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2013,12,91.667,0.575,76.813
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2014,12,100.000,1.109,77.749
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2015,12,83.333,0.874,74.574
+"XIU (TSX 60 ETF), CAD",10,perfect_timing,hindsight,2016,11,54.545,0.095,66.969
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,1999,2,100.000,0.608,120.000
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2000,12,100.000,1.044,117.873
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2001,12,100.000,0.970,122.790
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2002,12,100.000,1.074,132.780
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2003,12,100.000,1.326,138.434
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2004,12,100.000,1.453,148.865
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2005,12,100.000,1.680,159.031
+"XIU (TSX 60 ETF), CAD",20,dip_10pct,threshold,2006,11,100.000,1.319,161.326
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,1999,2,100.000,0.129,167.507
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2000,12,100.000,2.136,166.459
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2001,12,100.000,1.639,172.860
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2002,12,100.000,1.641,184.326
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2003,12,100.000,1.966,195.800
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2004,12,100.000,1.379,207.247
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2005,12,75.000,0.276,215.097
+"XIU (TSX 60 ETF), CAD",20,dip_20pct,threshold,2006,11,0.000,-1.320,215.321
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,1999,2,0.000,-4.875,196.977
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2000,12,75.000,1.741,196.591
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2001,12,100.000,0.579,200.312
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2002,12,100.000,0.474,211.595
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2003,12,100.000,0.700,223.069
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2004,12,41.667,-0.157,229.922
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2005,12,0.000,-1.318,230.628
+"XIU (TSX 60 ETF), CAD",20,dip_30pct,threshold,2006,11,0.000,-4.977,230.631
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,1999,2,0.000,-0.358,82.251
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2000,12,0.000,-0.109,81.385
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2001,12,0.000,-0.232,86.157
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2002,12,0.000,-0.298,94.220
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2003,12,0.000,-0.315,95.480
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2004,12,0.000,-0.347,101.851
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2005,12,0.000,-0.531,112.175
+"XIU (TSX 60 ETF), CAD",20,dip_5pct,threshold,2006,11,0.000,-0.696,117.663
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,1999,2,0.000,-0.149,189.848
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2000,12,0.000,-0.169,191.313
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2001,12,0.000,-4.362,187.214
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2002,12,0.000,-8.159,180.780
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2003,12,0.000,-6.693,181.087
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2004,12,0.000,-4.110,176.285
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2005,12,0.000,-2.275,168.290
+"XIU (TSX 60 ETF), CAD",20,perfect_timing,hindsight,2006,11,0.000,-2.172,163.124
